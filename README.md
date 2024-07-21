@@ -22,3 +22,25 @@ Prerequisites:
 Java 17 or later
 PostgreSQL 13 or later
 Maven 3.8 or late
+
+# Clone the repository:
+
+git clone https://github.com/your-username/employee-management-system.git
+
+# Configure PostgreSQL:
+
+Create a PostgreSQL database named employee_db. Update the src/main/resources/application.properties file with your database credentials:
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/employee_db
+spring.datasource.username=your-username
+spring.datasource.password=your-password
+spring.jpa.hibernate.ddl-auto=update
+
+# API Endpoints
+
+GET /employees: Retrieve a list of all employees.
+GET /employees/{id}: Retrieve details of a specific employee by ID.
+POST /employees: Create a new employee.
+PUT /employees/{id}: Update an existing employee.
+DELETE /employees/{id}: Delete an employee by ID.
+

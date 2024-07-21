@@ -16,6 +16,7 @@ Spring JPA: `Provides JPA/Hibernate support for data persistence.`
 PostgreSQL: `Relational database management system used to store employee data.`
 Spring Web: `Module for building web applications with RESTful endpoints.`
 
+
 # Getting Started
 
 Prerequisites:

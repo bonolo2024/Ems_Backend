@@ -46,9 +46,8 @@ public class EmployeeController implements EmployeeInterface {
 
     @PutMapping("/")
     @Override
-    public String updateEmployee(@RequestBody Employee employee) {
+    public void updateEmployee(@RequestBody Employee employee) {
             employeeService.updateEmployee(employee);
-            return null;
     }
 
     @DeleteMapping("/{employeeId}")

@@ -14,7 +14,7 @@ public interface EmployeeInterface {
 
     public String addEmployee(Employee employee);
 
-    public String updateEmployee(Employee employee);
+    public void updateEmployee(Employee employee);
 
     public void deleteEmployee(int employeeId);
 

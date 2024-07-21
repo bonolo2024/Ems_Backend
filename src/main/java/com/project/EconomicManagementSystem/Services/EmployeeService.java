@@ -17,46 +17,71 @@ public class EmployeeService implements EmployeeInterface {
 
     @Override
     public List<Employee> getEmployeesByAdminId(int adminId) {
-        return employeeRepository.findAllByAdminId(adminId);
+        try {
+            return employeeRepository.findAllByAdminId(adminId);
+        } catch (Exception e) {
+        }
+        return null;
     }
 
-    public List<Employee> getAllEmployees(){
-        return employeeRepository.findAll();
+    public List<Employee> getAllEmployees() {
+        try {
+            return employeeRepository.findAll();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
     public Employee getEmployeeById(int employeeId) {
-        return employeeRepository.findById(employeeId);
+        try {
+            return employeeRepository.findById(employeeId);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
     public String addEmployee(Employee employee) {
-        employeeRepository.save(employee);
+        try {
+            employeeRepository.save(employee);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return "Added successfully";
     }
 
 
     @Override
-    public String updateEmployee(Employee employee) {
-        Employee updatedEmployeeId = employeeRepository.findById(employee.getEmployeeId());
+    public void updateEmployee(Employee employee) {
+        try {
+            Employee updatedEmployeeId = employeeRepository.findById(employee.getEmployeeId());
 
-        if (updatedEmployeeId != null) {
-            employee.setFirstname(employee.getFirstname() == null ? updatedEmployeeId.getFirstname() : employee.getFirstname());
-            employee.setLastname(employee.getLastname() == null ? updatedEmployeeId.getLastname() : employee.getLastname());
-            employee.setEmail(employee.getEmail() == null ? updatedEmployeeId.getEmail() : employee.getEmail());
-            employee.setEmployeeNumber(employee.getEmployeeNumber() == null ? updatedEmployeeId.getEmployeeNumber() : employee.getEmployeeNumber());
-            employee.setDepartment(employee.getDepartment() == null ? updatedEmployeeId.getDepartment() : employee.getDepartment());
-            employee.setContacts(employee.getContacts() == null ? updatedEmployeeId.getContacts() : employee.getContacts());
+            if (updatedEmployeeId != null) {
+                employee.setFirstname(employee.getFirstname() == null ? updatedEmployeeId.getFirstname() : employee.getFirstname());
+                employee.setLastname(employee.getLastname() == null ? updatedEmployeeId.getLastname() : employee.getLastname());
+                employee.setEmail(employee.getEmail() == null ? updatedEmployeeId.getEmail() : employee.getEmail());
+                employee.setEmployeeNumber(employee.getEmployeeNumber() == null ? updatedEmployeeId.getEmployeeNumber() : employee.getEmployeeNumber());
+                employee.setDepartment(employee.getDepartment() == null ? updatedEmployeeId.getDepartment() : employee.getDepartment());
+                employee.setContacts(employee.getContacts() == null ? updatedEmployeeId.getContacts() : employee.getContacts());
 
-            employeeRepository.save(employee);
-            return "Updated Successfully";
-        } else {
-            return "This Employee does not exist";
+                employeeRepository.save(employee);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
     }
 
     @Override
     public void deleteEmployee(int employeeId) {
-        employeeRepository.deleteById(employeeId);
+        try {
+            employeeRepository.deleteById(employeeId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

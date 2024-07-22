@@ -1,13 +1,12 @@
-package com.project.EconomicManagementSystem.Controllers;
+package com.project.EmployeeManagementSystem.Controllers;
 
-import com.project.EconomicManagementSystem.Interface.EmployeeInterface;
-import com.project.EconomicManagementSystem.Model.Employee;
-import com.project.EconomicManagementSystem.Services.EmployeeService;
+import com.project.EmployeeManagementSystem.Interface.EmployeeInterface;
+import com.project.EmployeeManagementSystem.Model.Employee;
+import com.project.EmployeeManagementSystem.Services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 
 @RestController
@@ -44,9 +43,10 @@ public class EmployeeController implements EmployeeInterface {
         return null;
     }
 
-    @PutMapping("/")
-    @Override
-    public void updateEmployee(@RequestBody Employee employee) {
+    @PutMapping("/{employeeId}")
+//    @Override
+    public void updateEmployee(@PathVariable int employeeId, @RequestBody Employee employee) {
+        employee.setEmployeeId(employeeId);
             employeeService.updateEmployee(employee);
     }
 

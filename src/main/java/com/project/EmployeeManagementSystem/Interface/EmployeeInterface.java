@@ -1,10 +1,8 @@
-package com.project.EconomicManagementSystem.Interface;
+package com.project.EmployeeManagementSystem.Interface;
 
-import com.project.EconomicManagementSystem.Model.Admin;
-import com.project.EconomicManagementSystem.Model.Employee;
+import com.project.EmployeeManagementSystem.Model.Employee;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface EmployeeInterface {
 
@@ -14,7 +12,7 @@ public interface EmployeeInterface {
 
     public String addEmployee(Employee employee);
 
-    public void updateEmployee(Employee employee);
+//    public void updateEmployee(int employeeId, Employee employee);
 
     public void deleteEmployee(int employeeId);
 

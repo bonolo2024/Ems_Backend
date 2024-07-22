@@ -1,13 +1,12 @@
-package com.project.EconomicManagementSystem.Services;
+package com.project.EmployeeManagementSystem.Services;
 
-import com.project.EconomicManagementSystem.Interface.EmployeeInterface;
-import com.project.EconomicManagementSystem.Model.Employee;
-import com.project.EconomicManagementSystem.Repository.EmployeeRepository;
+import com.project.EmployeeManagementSystem.Interface.EmployeeInterface;
+import com.project.EmployeeManagementSystem.Model.Employee;
+import com.project.EmployeeManagementSystem.Repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class EmployeeService implements EmployeeInterface {
@@ -55,7 +54,7 @@ public class EmployeeService implements EmployeeInterface {
     }
 
 
-    @Override
+//    @Override
     public void updateEmployee(Employee employee) {
         try {
             Employee updatedEmployeeId = employeeRepository.findById(employee.getEmployeeId());
@@ -75,6 +74,12 @@ public class EmployeeService implements EmployeeInterface {
         }
 
     }
+
+
+//    public void updateEmployee(Employee employee) {
+//        employeeRepository.save(employee);
+//    }
+
 
     @Override
     public void deleteEmployee(int employeeId) {

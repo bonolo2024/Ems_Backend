@@ -1,6 +1,6 @@
-package com.project.EconomicManagementSystem.Repository;
+package com.project.EmployeeManagementSystem.Repository;
 
-import com.project.EconomicManagementSystem.Model.Employee;
+import com.project.EmployeeManagementSystem.Model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

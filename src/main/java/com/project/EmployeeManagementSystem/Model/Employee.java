@@ -1,4 +1,4 @@
-package com.project.EconomicManagementSystem.Model;
+package com.project.EmployeeManagementSystem.Model;
 
 import jakarta.persistence.*;
 import org.springframework.stereotype.Component;

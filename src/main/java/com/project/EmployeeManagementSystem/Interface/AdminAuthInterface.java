@@ -1,6 +1,6 @@
-package com.project.EconomicManagementSystem.Interface;
+package com.project.EmployeeManagementSystem.Interface;
 
-import com.project.EconomicManagementSystem.Model.Admin;
+import com.project.EmployeeManagementSystem.Model.Admin;
 import org.springframework.http.ResponseEntity;
 
 public interface AdminAuthInterface {

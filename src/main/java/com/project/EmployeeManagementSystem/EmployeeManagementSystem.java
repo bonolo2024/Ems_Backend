@@ -1,13 +1,13 @@
-package com.project.EconomicManagementSystem;
+package com.project.EmployeeManagementSystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EconomicManagementSystemApplication {
+public class EmployeeManagementSystem {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EconomicManagementSystemApplication.class, args);
+		SpringApplication.run(EmployeeManagementSystem.class, args);
 	}
 
 }

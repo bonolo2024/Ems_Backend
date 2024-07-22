@@ -1,4 +1,4 @@
-package com.project.EconomicManagementSystem.Model;
+package com.project.EmployeeManagementSystem.Model;
 
 
 import jakarta.persistence.*;
@@ -6,9 +6,7 @@ import jakarta.persistence.*;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 
 @Component
 @Table(name="admin")

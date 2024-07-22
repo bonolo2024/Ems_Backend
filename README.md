@@ -17,6 +17,12 @@ PostgreSQL: `Relational database management system used to store employee data.`
 Spring Web: `Module for building web applications with RESTful endpoints.`
 
 
+# Run the Project
+
+Go to EMS_Backend/src/main/java/com.project.EmployeeManagementSystem/EmployeeManagementSystem.java.
+Run by clicking on the "Run" button.
+
+
 # Getting Started
 
 Prerequisites:
